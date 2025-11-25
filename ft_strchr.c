@@ -1,15 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmgome <carmgome@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 15:33:33 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/17 15:33:35 by carmgome         ###   ########.fr       */
+/*   Created: 2025/11/25 12:53:11 by carmgome          #+#    #+#             */
+/*   Updated: 2025/11/25 12:56:39 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strchr(char *s, int c)
 {
-	
+	while (*s != '\0')
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (*s == c)
+		return(s);
+	return (NULL);
+}
