@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmgome <carmgome@student.42malaga.c      +#+  +:+       +#+        */
+/*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 15:33:21 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/17 15:33:23 by carmgome         ###   ########.fr       */
+/*   Created: 2025/11/26 21:11:34 by carmgome          #+#    #+#             */
+/*   Updated: 2025/11/26 21:14:37 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*ptr;
 
+	ptr = (unsigned char *)s;
 	i = 0;
-	if (!dst && !src)
-		return (NULL);
 	while (i < n)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		if (ptr[i] == (unsigned char)c)
+			return (&ptr[i]);
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }
