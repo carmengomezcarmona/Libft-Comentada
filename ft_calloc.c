@@ -6,9 +6,11 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 17:27:48 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/30 16:58:10 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:34:03 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

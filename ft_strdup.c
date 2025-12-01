@@ -6,9 +6,11 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 17:28:00 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/28 18:01:59 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:37:19 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char    *ft_strdup(const char *s1)
 {

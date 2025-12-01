@@ -6,9 +6,11 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 17:35:25 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/30 18:33:22 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:38:59 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

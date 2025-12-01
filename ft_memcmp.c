@@ -6,9 +6,11 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 10:49:28 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/27 13:58:14 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:35:55 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {

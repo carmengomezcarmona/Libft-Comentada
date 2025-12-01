@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmgome <carmgome@student.42malaga.c      +#+  +:+       +#+        */
+/*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 11:36:29 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/20 13:06:20 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:38:02 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t ft_strlcat (char *dst, const char *src, size_t size)
 {
@@ -29,6 +31,6 @@ size_t ft_strlcat (char *dst, const char *src, size_t size)
 			dst[dst_lrn +i] = src[i];
 			i++;
 		}
-	dst[dst_len + i] = `\0';
+	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }

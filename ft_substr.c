@@ -6,9 +6,11 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 16:53:27 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/30 16:58:43 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:39:09 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char    *ft_substr(const char *s, unsigned int start, size_t len)
 {

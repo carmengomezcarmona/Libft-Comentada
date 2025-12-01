@@ -6,9 +6,11 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 10:50:00 by carmgome          #+#    #+#             */
-/*   Updated: 2025/11/27 14:40:22 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:38:35 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strnstr(const char *big, const char *little, size_t n)
 {
