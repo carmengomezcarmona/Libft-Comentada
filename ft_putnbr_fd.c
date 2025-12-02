@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isasccii.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 15:12:44 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 14:34:43 by carmgome         ###   ########.fr       */
+/*   Created: 2025/12/01 18:41:40 by carmgome          #+#    #+#             */
+/*   Updated: 2025/12/01 18:53:27 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void    ft_putnbr_fd(int n, int fd)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+    long	num;
+
+    num = n;
+    if (num < 0)
+    {
+        ft_putchar_fd('-', fd);
+        num = -num;
+    }
+    if (num >= 10)
+    {
+        ft_putnbr_fd(num / 10, fd);
+    }
+    ft_putchar_fd((num % 10) + '0', fd);
 }

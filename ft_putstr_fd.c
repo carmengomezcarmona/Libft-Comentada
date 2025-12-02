@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/27 12:23:12 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 20:48:48 by carmgome         ###   ########.fr       */
+/*   Created: 2025/12/01 18:25:24 by carmgome          #+#    #+#             */
+/*   Updated: 2025/12/01 20:51:45 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
-	int sign;
-	int num;
+    int i;
 
-	i = 0;
-	sign = 1;
-	num = 0;
-
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-
-	if (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
-		sign = -1;
-		i++;
-	}
-	
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (sign * num);
+    if (!s)
+        return ;
+    
+    i = 0;
+    while (s[i])
+    {
+        ft_putchar_fd(s[i], fd);
+        i++;
+    }
 }

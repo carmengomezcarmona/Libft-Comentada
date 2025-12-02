@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 11:36:29 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 14:38:02 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 19:59:14 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ size_t ft_strlcat (char *dst, const char *src, size_t size)
 		return (size + src_len);
 
 	i=0;
-	dst_len + i + 1 < size
-		while (src[i] && (dst_len + i +1) < size)
-		{
-			dst[dst_lrn +i] = src[i];
-			i++;
-		}
+	while (src[i] && (dst_len + i +1) < size)
+	{
+		dst[dst_len +i] = src[i];
+		i++;
+	}
+	
 	dst[dst_len + i] = '\0';
+	
 	return (dst_len + src_len);
 }

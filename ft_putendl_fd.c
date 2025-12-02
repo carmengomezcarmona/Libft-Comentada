@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/27 12:23:12 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 20:48:48 by carmgome         ###   ########.fr       */
+/*   Created: 2025/12/01 18:27:28 by carmgome          #+#    #+#             */
+/*   Updated: 2025/12/01 20:51:57 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
-	int sign;
-	int num;
-
-	i = 0;
-	sign = 1;
-	num = 0;
-
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-
-	if (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
-		sign = -1;
-		i++;
-	}
-	
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (sign * num);
+    if (s)
+    {
+        ft_putstr_fd(s, fd);
+        ft_putchar_fd('\n', fd);
+    }
 }
+
+/*
+int main(void)
+{
+    char str1[] = "Hola mundo!";
+    char str2[] = "Esta es otra línea";
+    char str3[] = "";
+
+    // Cada llamada imprime la cadena y luego un salto de línea
+    ft_putendl_fd(str1, 1);
+    ft_putendl_fd(str2, 1);
+    ft_putendl_fd(str3, 1);
+
+    return 0;
+}*/

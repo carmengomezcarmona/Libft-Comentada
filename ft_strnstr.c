@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 10:50:00 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 14:38:35 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 20:44:54 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ char *ft_strnstr(const char *big, const char *little, size_t n)
     i = 0;
     while (i < n && big[i] != '\0')
     {
-        if (big[i] == litlle[0])
+        if (big[i] == little[0])
             {
                 j = 0;
                 while (i + j < n && big[i+j] == little[j] && little[j] != '\0')
                 j++;
-                if (litlle[j] == '\0')
+                if (little [j] == '\0')
                     return ((char *)(big +i));
             }
             i++;

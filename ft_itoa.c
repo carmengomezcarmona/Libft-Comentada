@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:38:37 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 14:35:22 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/01 20:49:53 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char    *ft_itoa(int n)
         long temp = num;
         while (temp > 0)
         {
-            temp / 10;
+            temp = temp / 10;
             digits++;
         }
     }
