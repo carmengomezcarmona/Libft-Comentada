@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 12:53:11 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/02 10:42:15 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/02 22:17:13 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char *ft_strchr(const char *s, int c)
 {
+    unsigned char uc = (unsigned char)c;
+
     while (*s)
     {
-        if (*s == (char)c)
+        if ((unsigned char)*s == uc)
             return ((char *)s);
         s++;
     }
-    if (c == 0)
+    if (uc == '\0')
         return ((char *)s);
     return (NULL);
 }

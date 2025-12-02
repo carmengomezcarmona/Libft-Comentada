@@ -12,30 +12,28 @@
 
 #include "libft.h"
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    long num;
-    int     digits;
-    int     neg;
-    char    *str;
-    int     i;
+    long	num;
+    int		digits;
+    int		neg;
+    char	*str;
+    int		i;
 
     num = n;
     neg = 0;
     digits = 0;
-
     if (num < 0)
     {
         neg = 1;
         num = -num;
     }
-
     if (num == 0)
         digits = 1;
     else
     {
-        long temp = num;
-        while (temp > 0)
+	    long temp = num;
+	    while (temp > 0)
         {
             temp = temp / 10;
             digits++;
