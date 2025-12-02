@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:33:33 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 14:36:11 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:32:14 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
 
-	if (!d && !s)
+	if (!d || !s)
 		return (NULL);
 
 	if (d < s)
@@ -44,4 +44,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-	

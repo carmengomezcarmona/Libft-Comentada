@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 16:27:37 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 17:31:21 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:47:57 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 #include <stdio.h>
 #include "libft.h"
 
-void to_uppercase(unsigned int i, char *c)
+void ft_to_uppercase(unsigned int i, char *c)
 {
     (void)i;
     if (*c >= 'a' && *c <= 'z')
@@ -43,11 +43,11 @@ int main(void)
     char str2[] = "42malaga";
 
     printf("Antes: %s\n", str1);
-    ft_striteri(str1, to_uppercase);
+    ft_striteri(str1, ft_to_uppercase);
     printf("Después: %s\n\n", str1);
 
     printf("Antes: %s\n", str2);
-    ft_striteri(str2, to_uppercase);
+    ft_striteri(str2, ft_to_uppercase);
     printf("Después: %s\n\n", str2);
 
     return 0;

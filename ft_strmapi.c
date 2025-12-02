@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 15:07:23 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 16:19:37 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:52:14 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 #include "libft.h"
 #include <stdio.h>
 
-// Función f: convertir a mayúsculas
-char to_upper(unsigned int i, char c)
+char ft_to_upper(unsigned int i, char c)
 {
-    (void)i; // ignoramos el índice
+    (void)i;
     if (c >= 'a' && c <= 'z')
         return c - 32;
     return c;
@@ -51,7 +50,7 @@ int main(void)
 {
     char *s = "hola";
 
-    char *res1 = ft_strmapi(s, to_upper);
+    char *res1 = ft_strmapi(s, ft_to_upper);
     printf("Mayúsculas: %s\n", res1);
     free(res1);
 

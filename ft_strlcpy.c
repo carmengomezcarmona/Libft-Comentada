@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:33:50 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 19:50:10 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:49:53 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ size_t ft_strlcpy (char *dst, const char *src, size_t dstsize)
 	}
 		return(ft_strlen(src));
 }
-

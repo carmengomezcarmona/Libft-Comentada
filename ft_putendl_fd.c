@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 18:27:28 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 20:51:57 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:34:44 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int main(void)
     char str2[] = "Esta es otra línea";
     char str3[] = "";
 
-    // Cada llamada imprime la cadena y luego un salto de línea
     ft_putendl_fd(str1, 1);
     ft_putendl_fd(str2, 1);
     ft_putendl_fd(str3, 1);

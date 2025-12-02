@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:38:37 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 20:49:53 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/02 10:28:42 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char    *ft_itoa(int n)
     
     return str;
 }
+
 /*  
 #include <stdio.h>
 #include "libft.h"
@@ -74,11 +75,11 @@ int main(void)
 
     while (i < 5)
     {
-        char *str = ft_itoa(nums[i]);  // convertimos entero a string
+        char *str = ft_itoa(nums[i]);
         if (str)
         {
             printf("ft_itoa(%d) = %s\n", nums[i], str);
-            free(str);  // liberar la memoria reservada por ft_itoa
+            free(str);
         }
         else
             printf("Error malloc para %d\n", nums[i]);
