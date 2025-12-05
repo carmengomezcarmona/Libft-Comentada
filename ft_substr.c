@@ -12,34 +12,28 @@
 
 #include "libft.h"
 
-char    *ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-    size_t	i;
-    size_t	slen;
-    char	*copy;
+	size_t	i;
+	size_t	slen;
+	char	*copy;
 
-    if (!s)
-        return (NULL);
-
-    slen = ft_strlen(s);
-    
-    if (start >= slen)
-        return (ft_strdup(""));
-
-    if (len > slen - start)
-        len = slen - start;
-
-    copy = malloc(len + 1);
-    if (!copy)
-        return (NULL);
-
-    i = 0;
-    while (i < len)
-    {
-        copy[i] = s[start + i];
-        i++;
-    }
-    copy[i] = '\0';
-
-    return (copy);
+	if (!s)
+		return (NULL);
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	copy = malloc(len + 1);
+	if (!copy)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		copy[i] = s[start + i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
 }

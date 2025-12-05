@@ -14,7 +14,7 @@
 
 static size_t	ft_count_words(const char *s, char c)
 {
-	size_t i = 0;
+	size_t	i = 0;
 	size_t words = 0;
 
 	while (s[i])

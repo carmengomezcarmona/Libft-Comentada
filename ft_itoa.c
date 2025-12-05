@@ -14,52 +14,48 @@
 
 char	*ft_itoa(int n)
 {
-    long	num;
-    int		digits;
-    int		neg;
-    char	*str;
-    int		i;
+	long		num;
+	int			digits;
+	int			neg;
+	char		*str;
+	int			i;
 
-    num = n;
-    neg = 0;
-    digits = 0;
-    if (num < 0)
-    {
-        neg = 1;
-        num = -num;
-    }
-    if (num == 0)
-        digits = 1;
-    else
-    {
-	    long temp = num;
-	    while (temp > 0)
-        {
-            temp = temp / 10;
-            digits++;
-        }
-    }
-
-    str = (char *)malloc(digits + neg + 1);
-    if (!str)
-        return NULL;
-    
-    i = digits + neg;
-    str[i] = '\0';
-    i--;
-
-    if (num == 0)
-        str[i] = '0';
-    while (num > 0)
-    {
-        str[i] = (num % 10) + '0';
-        num /= 10;
-        i--;
-    }
-    if (neg)
-        str[0] = '-';
-    
-    return str;
+	num = n;
+	neg = 0;
+	digits = 0;
+	if (num < 0)
+	{
+		neg = 1;
+		num = -num;
+	}
+	if (num == 0)
+		digits = 1;
+	else
+	{
+		long	temp = num;
+		while (temp > 0)
+		{
+			temp = temp / 10;
+			digits++;
+		}
+	}
+	str = (char *)malloc(digits + neg + 1);
+	if (!str)
+		return (NULL);
+	i = digits + neg;
+	str[i] = '\0';
+	i--;
+	if (num == 0)
+		str[i] = '0';
+	while (num > 0)
+	{
+		str[i] = (num % 10) + '0';
+		num /= 10;
+		i--;
+	}
+	if (neg)
+		str[0] = '-';
+	return (str);
 }
 
 /*  
