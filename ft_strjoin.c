@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 16:59:51 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/02 10:48:37 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/05 12:46:51 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len1;
 	size_t	len2;
-	size_t	i;
-	size_t	j;
 	char	*new;
 
 	if (!s1 || !s2)
@@ -27,18 +25,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new = malloc(len1 + len2 + 1);
 	if (!new)
 		return (NULL);
-	i = 0;
-	while (i < len1)
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (j < len2)
-	{
-		new[i + j] = s2[j];
-		j++;
-	}
-	new[i + j] = '\0';
+	ft_memmove(new, s1, len1);
+	ft_memmove(&new[len1], s2, len2);
+	new[len1 + len2] = '\0';
 	return (new);
 }
+
+/*int main (void)
+{
+	char * resultado;
+	char *s1;
+	char *s2;
+	s1 = "Manolo";
+	s2= "Pepe";
+	resultado = ft_strjoin (s1, s2);
+	printf("%s\n", resultado);
+}*/

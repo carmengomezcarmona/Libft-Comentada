@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*#include <stdio.h>*/
 
 size_t	ft_strlen(const char*s)
 {
@@ -21,3 +22,12 @@ size_t	ft_strlen(const char*s)
 		i++;
 	return (i);
 }
+
+/*int main (void)
+{
+	size_t suma;
+	char *frase;
+	frase = "Holas";
+	suma = ft_strlen (frase);
+	printf("La palabra tiene %zu letras", suma);
+}*/

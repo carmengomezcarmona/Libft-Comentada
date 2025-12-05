@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/*/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:32:46 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/02 21:51:19 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/05 12:46:38 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,15 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/*#include <stdio.h>
+int main(void)
+{
+	int pegatina;
+	pegatina = 'E';
+	size_t n;
+	n = 3;
+	char s[] = "aaaaaaaaaa";
+	char *resultadoFuncion;
+	resultadoFuncion = ft_memset(s, pegatina, n);
+	printf("%s",resultadoFuncion);
+}*/

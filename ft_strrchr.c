@@ -12,18 +12,33 @@
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    const char *last = NULL;
-    unsigned char uc = (unsigned char)c;
+	const char		*last;
+	unsigned char	uc;
 
-    while (*s)
-    {
-        if ((unsigned char)*s == uc)
-            last = s;
-        s++;
-    }
-    if (uc == '\0')
-        return ((char *)s);
-    return ((char *)last);
+	last = NULL;
+	uc = (unsigned char)c;
+	while (*s)
+	{
+		if ((unsigned char)*s == uc)
+			last = s;
+		s++;
+	}
+	if (uc == '\0')
+		return ((char *)s);
+	return ((char *)last);
 }
+
+/*#include <stdio.h>
+int main (void)
+{
+	const char *desfile;
+	desfile = "Esto es una pasarela";
+	int modelo;
+	modelo = 'e';
+	char *foto;
+	foto = ft_strrchr (desfile, modelo);
+	printf("El ultimo sitio donde esta la modelo es %p, (sitio hexadecimal)\n", foto);
+	printf("El ultimo sitio donde esta la modelo es %s, (sitio en la cadena)\n", foto);
+}*/

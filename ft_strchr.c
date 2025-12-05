@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	uc
-		(unsigned char)		c;
+	unsigned char	uc;
 
+	(unsigned char) c;
 	while (*s)
 	{
 		if ((unsigned char)*s == uc)
@@ -27,3 +27,16 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
+/*#include <stdio.h>
+int main (void)
+{
+	const char *desfile;
+	desfile = "Busca aqui tu letra";
+	int letra;
+	letra = 'a';
+	char *direccion;
+	direccion = ft_strchr(desfile, letra);
+	printf ("La letra está en la posición: %p (sitio hexadecimal)\n", direccion);
+	printf ("La letra está en la posición: %s (sitio en la frase)\n", direccion);
+}*/
