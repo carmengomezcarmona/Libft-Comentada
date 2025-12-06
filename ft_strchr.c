@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 12:53:11 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/02 22:17:13 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/06 13:46:09 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	unsigned char	uc;
 
-	(unsigned char) c;
+	uc =(unsigned char) c;
 	while (*s)
 	{
 		if ((unsigned char)*s == uc)
