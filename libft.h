@@ -6,15 +6,15 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 19:35:52 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/01 19:39:08 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:34:34 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 // Function prototypes
 int		ft_isalpha(int c);

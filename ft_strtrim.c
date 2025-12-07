@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 17:35:25 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/06 15:13:41 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/07 14:04:09 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, start, end - start));
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main (void)
 {
 	const char *pan;
@@ -39,4 +39,4 @@ int main (void)
 	resultado = ft_strtrim (pan, corte);
 	printf("El corte es: %s\n", resultado);
 	return (0);
-}
+}*/

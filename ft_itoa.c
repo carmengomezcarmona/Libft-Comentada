@@ -6,80 +6,77 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:38:37 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/02 10:28:42 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/07 13:15:25 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	get_len(long n)
+{
+	int	len;
+
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
 char	*ft_itoa(int n)
 {
 	long		num;
-	int			digits;
-	int			neg;
+	int			len;
 	char		*str;
-	int			i;
 
 	num = n;
-	neg = 0;
-	digits = 0;
-	if (num < 0)
-	{
-		neg = 1;
-		num = -num;
-	}
-	if (num == 0)
-		digits = 1;
-	else
-	{
-		long	temp = num;
-		while (temp > 0)
-		{
-			temp = temp / 10;
-			digits++;
-		}
-	}
-	str = (char *)malloc(digits + neg + 1);
+	len = get_len(num);
+	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
-	i = digits + neg;
-	str[i] = '\0';
-	i--;
-	if (num == 0)
-		str[i] = '0';
+	str[len] = '\0';
+	if (n < 0)
+		num = -num;
+	if (n == 0)
+		str[0] = '0';
 	while (num > 0)
 	{
-		str[i] = (num % 10) + '0';
+		str[len - 1] = (num % 10) + '0';
 		num /= 10;
-		i--;
+		len--;
 	}
-	if (neg)
+	if (n < 0)
 		str[0] = '-';
 	return (str);
 }
 
-/*  
+/*
 #include <stdio.h>
-#include "libft.h"
+#include <stdlib.h> // Para free y malloc
 
 int main(void)
 {
-    int nums[] = {123, -456, 0, 2147483647, -2147483648};
-    size_t i = 0;
+    int number;
+	char *resultado;
 
-    while (i < 5)
-    {
-        char *str = ft_itoa(nums[i]);
-        if (str)
-        {
-            printf("ft_itoa(%d) = %s\n", nums[i], str);
-            free(str);
-        }
-        else
-            printf("Error malloc para %d\n", nums[i]);
-        i++;
-    }
+	number = -12345;
+	resultado = ft_itoa(number);
+	printf("El número %d como string es: %s\n", number, resultado);
+	free(resultado);
+	
+	number = 0;
+	resultado = ft_itoa(number);
+	printf("El número %d como string es: %s\n", number, resultado);
+	free(resultado);
 
-    return 0;
-}
-*/
+	number = -2147483648;
+	resultado = ft_itoa(number);
+	printf("El número %d como string es: %s\n", number, resultado);
+	free(resultado);	
+
+	return 0;
+}*/
