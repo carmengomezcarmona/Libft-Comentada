@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 19:45:01 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/10 21:23:18 by carmgome         ###   ########.fr       */
+/*   Created: 2025/12/10 10:46:40 by carmgome          #+#    #+#             */
+/*   Updated: 2025/12/10 11:46:37 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    if (!lst || !del)
-        return;
-    del(lst->content);
-    free(lst);
+	t_list	*cajatemporal;
+	if (!lst || !del)
+		return;
+	while (*lst != NULL)
+	{
+		cajitatemporal = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = cajitatemporal;
+	}
+	*lst = NULL;
 }
