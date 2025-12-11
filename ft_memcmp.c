@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 10:49:28 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/11 23:27:31 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/12 00:34:16 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,24 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n) //compara dos bloques de
 	}
 	return (0); //si son iguales devuelve 0
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char s1[] = "Hola mundo";
+    char s2[] = "Hola Mundo"; // Diferencia en la 'M' mayúscula
+    size_t n = 10;            // Comparar los primeros 10 bytes
+    int resultado;
+
+    resultado = ft_memcmp(s1, s2, n);
+
+    if (resultado == 0)
+        printf("Los primeros %zu bytes son iguales\n", n);
+    else if (resultado < 0)
+        printf("s1 es menor que s2 en la comparación de los primeros %zu bytes\n", n);
+    else
+        printf("s1 es mayor que s2 en la comparación de los primeros %zu bytes\n", n);
+
+    return 0;
+}*/

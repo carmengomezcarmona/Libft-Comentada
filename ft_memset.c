@@ -6,12 +6,12 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 13:38:30 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/11 21:33:02 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/12 00:36:12 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// Rellena n bytes de memoria con un caracter c
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr; //convetimos void a unsigned char
