@@ -6,28 +6,28 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 12:58:27 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/06 13:56:13 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/12 00:01:17 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// busca la ultima aparicion del caracter c en la cadena s
 char	*ft_strrchr(const char *s, int c)
 {
-	const char		*last;
-	unsigned char	uc;
+	const char		*last; // puntero a la ultima aparicion
+	unsigned char	uc; // para comparar con el caracter c
 
-	last = NULL;
-	uc = (unsigned char)c;
-	while (*s)
-	{
-		if ((unsigned char)*s == uc)
-			last = s;
-		s++;
+	last = NULL; // inicializamos a NULL
+	uc = (unsigned char)c; // convertimos c a unsigned char
+	while (*s) // recorremos la cadena
+	{// mientras no lleguemos al final
+		if ((unsigned char)*s == uc) // si encontramos el caracter
+			last = s; // actualizamos last
+		s++; // avanzamos en la cadena
 	}
-	if (uc == '\0')
-		return ((char *)s);
-	return ((char *)last);
+	if (uc == '\0') // si c es el caracter nulo
+		return ((char *)s); // devolvemos el final de la cadena
+	return ((char *)last); // devolvemos la ultima aparicion o NULL
 }
 
 /*#include <stdio.h>

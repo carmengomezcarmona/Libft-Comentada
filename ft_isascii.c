@@ -6,12 +6,12 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 19:43:45 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/02 10:25:06 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/11 23:29:14 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//comprobar si el caracter es ascii
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

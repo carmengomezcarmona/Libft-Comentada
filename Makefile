@@ -6,11 +6,11 @@
 #    By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/01 19:16:15 by carmgome          #+#    #+#              #
-#    Updated: 2025/12/11 21:03:11 by carmgome         ###   ########.fr        #
+#    Updated: 2025/12/12 00:07:03 by carmgome         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libft.a 
 
 SRCS = ft_isalnum.c ft_bzero.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_isprint.c ft_memset.c ft_strlen.c ft_memcpy.c ft_memmove.c \

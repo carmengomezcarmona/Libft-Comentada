@@ -6,11 +6,11 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 19:35:52 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/11 13:47:26 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/12 00:07:07 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#ifndef LIBFT_H 
 # define LIBFT_H
 
 # include <stdlib.h>
