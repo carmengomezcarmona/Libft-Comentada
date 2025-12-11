@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 13:14:44 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/09 16:30:39 by carmgome         ###   ########.fr       */
+/*   Created: 2025/12/10 10:46:40 by carmgome          #+#    #+#             */
+/*   Updated: 2025/12/11 14:14:52 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstclear_bonus(t_list **lst, void (*del)(void*))
 {
-    if (!new || !lst)
-        return;
-    new->next = *lst;
-    *lst = new;
+	t_list	*cajatemporal;
+
+	cajatemporal = (*lst)->next;
+	if (!lst || !del)
+		return ;
+	while (*lst != NULL)
+	{
+		ft_lstdelone(*lst, del);
+		*lst = cajatemporal;
+	}
+	*lst = NULL;
 }

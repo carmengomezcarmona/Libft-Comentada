@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:33:21 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/02 10:31:52 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/11 12:26:20 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
 
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
 	i = 0;
-	if (!dst || !src)
+	if (!dst && !src)
 		return (NULL);
 	while (i < n)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dst);

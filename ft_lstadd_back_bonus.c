@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 21:11:34 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/10 16:18:23 by carmgome         ###   ########.fr       */
+/*   Created: 2025/12/09 19:16:31 by carmgome          #+#    #+#             */
+/*   Updated: 2025/12/11 14:13:37 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstadd_back_bonus(t_list **lst, t_list *new)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	t_list	*ultimo_nodo;
 
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	ultimo_nodo = ft_lstlast(*lst);
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
 	{
-		if (ptr[i] == (unsigned char)c)
-			return (&ptr[i]);
-		i++;
+		*lst = new;
+		return ;
 	}
-	return (NULL);
+	ultimo_nodo->next = new;
 }
