@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 11:50:23 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/11 23:15:24 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/12 18:36:36 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_lstiter_bonus(t_list *lst, void (*f)(void *))
 	{
 		f(lst->content); //  Aplicamos la función al contenido
 		lst = lst->next; // Avanzamos al siguiente nodo
+	}
 }
 /*Esta función no crea, no borra y no modifica la lista, solo 
 procesa el contenido de cada nodo.

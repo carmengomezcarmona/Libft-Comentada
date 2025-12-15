@@ -6,7 +6,7 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:33:03 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/11 22:48:42 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/12 16:29:12 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
+
 #include <stdio.h>
 int main()
 {
@@ -33,9 +33,8 @@ int main()
     size_t cuantos;
     cuantos = 10;
     printf("Antes de bzero: %s\n", frase);
-    bzero(frase, cuantos);
+    ft_bzero(frase, cuantos);
     printf("Despues de ft_bzero: %s\n", frase);
     printf("Despues (saltando los 0s): %s\n", frase + 10);
     return 0;
 }
-*/
