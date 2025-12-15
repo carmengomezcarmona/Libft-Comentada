@@ -15,7 +15,7 @@
 /*t_list **lst → un puntero al puntero del primer nodo de la lista
  (esto es importante, porque vamos a modificar el inicio de la lista).
 t_list *new → el nodo que queremos añadir al principio de la lista.*/
-void	ft_lstadd_front_bonus(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new || !lst) // si falla el nuevo nodo, o la lista , no hacemos nada
 		return ;

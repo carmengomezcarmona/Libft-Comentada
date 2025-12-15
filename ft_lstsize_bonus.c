@@ -14,7 +14,7 @@
 /*cuenta los nodos de una lista; nos va a devolver 
 un entero: el numero de nodos que hay en la lista, 
 recibe un puntero a la lista*/
-int	ft_lstsize_bonus(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 

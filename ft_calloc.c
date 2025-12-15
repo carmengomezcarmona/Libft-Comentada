@@ -6,12 +6,12 @@
 /*   By: carmgome <carmgome@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 17:27:48 by carmgome          #+#    #+#             */
-/*   Updated: 2025/12/11 23:06:21 by carmgome         ###   ########.fr       */
+/*   Updated: 2025/12/12 12:15:56 by carmgome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// reserva memoria para un array de nmemb (cuántos elementos quieres) elementos, cada uno de tamaño size (lo q ocupa), y además la deja a 0
+// reserva memoria para un array de nmemb (cuántos elementos quieres), cada uno de tamaño size (lo q ocupa), y además la deja a 0
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total; // total de memoria a reservar

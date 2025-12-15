@@ -13,7 +13,7 @@
 #include "libft.h"
 /* esta funcion devuelve un puntero al último nodo de la lista, recibe lst que es un puntero
 al primer nodo*/
-t_list	*ft_lstlast_bonus(t_list *lst) //la función recibe un puntero a la lista
+t_list	*ft_lstlast(t_list *lst) //la función recibe un puntero a la lista
 {
 	if (!lst) // si la lista está vacía, no hay ultimo nodo, devuelve nulo
 		return (NULL);

@@ -15,7 +15,7 @@
    Parámetros:
    - lst: Puntero al primer nodo de la lista.
    - f: Puntero a la función que se aplicará al contenido de cada nodo*/
-void	ft_lstiter_bonus(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)//Si no hay lista o no hay función, no hacemos nada.
 		return ;
@@ -23,6 +23,7 @@ void	ft_lstiter_bonus(t_list *lst, void (*f)(void *))
 	{
 		f(lst->content); //  Aplicamos la función al contenido
 		lst = lst->next; // Avanzamos al siguiente nodo
+		lst = lst->next;// Avanzamos al siguiente nodo
 	}
 }
 /*Esta función no crea, no borra y no modifica la lista, solo 

@@ -13,7 +13,7 @@
 #include "libft.h"
 /*la función devuelve un puntero a un nodo (t_list *). 
 El parámetro void *content es genérico, porque no sabemos aún qué tipo de dato tendrá*/
-t_list	*ft_lstnew_bonus(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;//declaraMOS un puntero que apuntará al nuevo nodo que vamos a crear.
 

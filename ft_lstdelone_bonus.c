@@ -15,7 +15,7 @@
 lst → el nodo que queremos eliminar.
 del → un puntero a la función que se encarga de liberar el contenido del nodo, 
 porque puede ser cualquier tipo de dato.*/
-void	ft_lstdelone_bonus(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del) //Si no hay nodo o no hay función para borrar el contenido, no hacemos nada.
 		return ;

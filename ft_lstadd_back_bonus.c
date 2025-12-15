@@ -14,7 +14,7 @@
 /* esta funcion añade el nuevo nodo al final de la lista 'lst', recibe **lst un puntero 
 al inicio de la lista, xq puede q este vacía y tengamos q modificar ese puntero, y
 t_list *new → el nodo que queremos añadir al final */
-void	ft_lstadd_back_bonus(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ultimo_nodo; // creamos un puntero para recorrer la lista y encontrar el ultimo nodo
 
