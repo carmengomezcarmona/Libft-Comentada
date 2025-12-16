@@ -22,7 +22,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while (lst != NULL) // mientras haya nodos en la lista 
 	{
 		f(lst->content); //  Aplicamos la función al contenido
-		lst = lst->next; // Avanzamos al siguiente nodo
 		lst = lst->next;// Avanzamos al siguiente nodo
 	}
 }

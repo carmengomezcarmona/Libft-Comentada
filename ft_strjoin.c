@@ -40,4 +40,5 @@ char	*ft_strjoin(char const *s1, char const *s2) // une dos strings en una nueva
 	s2= "Pepe";
 	resultado = ft_strjoin (s1, s2);
 	printf("%s\n", resultado);
+	free(resultado);
 }*/

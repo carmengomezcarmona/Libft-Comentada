@@ -26,7 +26,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     char frase[] = "Esto hay que rellenarlo con ceros";
@@ -37,4 +37,4 @@ int main()
     printf("Despues de ft_bzero: %s\n", frase);
     printf("Despues (saltando los 0s): %s\n", frase + 10);
     return 0;
-}
+}*/

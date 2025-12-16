@@ -68,3 +68,16 @@ int main(void)
     return 0;
 }
 */
+
+int main(void)
+{
+	const char *cadena= "Mi gozo en un pozo";
+	unsigned int star;
+	star = 11;
+	size_t longitud;
+	longitud = 7;
+	char *subcadena;
+	subcadena = ft_substr(cadena, star, longitud);
+	printf("la subcadena ahora es: %s\n" , subcadena);
+	free(subcadena);
+}

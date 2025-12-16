@@ -40,24 +40,10 @@ int main(void)
     char *original;   // la cadena que queremos duplicar
     char *copia;      // aquí guardaremos la copia hecha por ft_strdup
 
-    original = "Esta es la cadena original.";
-    
-    // Llamamos a ft_strdup para crear una copia de la cadena
+    original = "wirifriskiwirifriski";
     copia = ft_strdup(original);
-
-    // Comprobamos que la copia no sea NULL y mostramos resultados
-    if (copia != NULL)
-    {
-        printf("Original: %s\n", original);  // mostramos la cadena original
-        printf("Copia   : %s\n", copia);     // mostramos la copia
-    }
-    else
-    {
-        printf("Error: ft_strdup no pudo reservar memoria.\n");
-    }
-
-    // Liberamos la memoria que ft_strdup reservó
-    free(copia);
-
+    printf("%s : original\n", original);
+    printf("%s : copia\n", copia);
+    free(copia)
     return 0;
 }*/
